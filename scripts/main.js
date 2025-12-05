@@ -85,20 +85,25 @@ const updateActiveNav = () => {
 window.addEventListener('scroll', updateActiveNav);
 updateActiveNav(); // Initial call
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links (only for internal links)
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+        const href = link.getAttribute('href');
         
-        if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+        // Only prevent default for internal links (starting with #)
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(href);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         }
+        // External links will work normally
     });
 });
 

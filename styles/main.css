@@ -122,6 +122,26 @@ body {
     width: 100%;
 }
 
+.nav-coffee-btn {
+    background: var(--primary-green);
+    color: var(--bg-white) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 20px;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.nav-coffee-btn::after {
+    display: none;
+}
+
+.nav-coffee-btn:hover {
+    background: var(--primary-green-dark);
+    color: var(--bg-white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-green);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -917,6 +937,12 @@ body {
         left: 0;
     }
 
+    .nav-coffee-btn {
+        margin-left: 0;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+
     .nav-toggle {
         display: flex;
     }
@@ -965,9 +991,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .timeline-skills {
-        /* Chips already wrap, no grid needed */
-    }
 
     .contact-info {
         grid-template-columns: 1fr;

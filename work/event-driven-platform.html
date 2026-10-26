@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: event-driven backend services for VOLL, a corporate travel and expense SaaS. GraphQL, Kafka, and travel booking integrations.">
+    <title>Corporate travel SaaS — Douglas Bussmann</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="work">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Douglas Bussmann</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#work" class="nav-link" data-nav="work">Work</a></li>
+                <li><a href="../index.html#demos" class="nav-link" data-nav="demos">Demos</a></li>
+                <li><a href="../resume.html" class="nav-link" data-nav="resume">Resume</a></li>
+                <li><a href="../index.html#contact" class="nav-link" data-nav="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="subpage">
+        <article class="case">
+            <p class="back-link"><a href="../index.html#work">All work</a></p>
+            <p class="case-kicker">Case study · Framework Digital · VOLL</p>
+            <h1>Event-driven services for corporate travel and expenses</h1>
+            <p class="case-meta">Software Engineer · September 2023 – July 2024 · Belo Horizonte, MG (Remote)</p>
+
+            <section class="case-section">
+                <h2>Context</h2>
+                <p>
+                    <a href="https://www.govoll.com/" target="_blank" rel="noopener noreferrer">VOLL</a> is a SaaS platform for corporate travel management and expense automation.
+                    I worked there as a contractor through <a href="https://www.frameworkdigital.com.br/" target="_blank" rel="noopener noreferrer">Framework Digital</a>, on the backend services.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>Problem</h2>
+                <p>
+                    Companies booked business flights and vehicles through separate airline and rental providers.
+                    The platform needed those bookings in one place, and business expenses needed a simpler path than reimbursing scattered purchases.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>Constraints</h2>
+                <p>
+                    Bookings came from external airline and rental partners, so the platform depended on integrations it did not control.
+                    Services talked to each other across a distributed system, and some work had to finish asynchronously instead of inside a request.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>What I owned</h2>
+                <ul>
+                    <li>Design and development of scalable backend services for the platform.</li>
+                    <li>Design and implementation of the integrations that centralised corporate travel bookings.</li>
+                    <li>Building and maintaining GraphQL APIs and Kafka-based event-driven services.</li>
+                    <li>Contributing to the architecture and planning of a centralised virtual corporate card.</li>
+                    <li>Taking part in architecture discussions and team engineering standards.</li>
+                </ul>
+            </section>
+
+            <section class="case-section">
+                <h2>Decisions</h2>
+                <ol>
+                    <li>Centralise bookings behind the platform. Integrating airline and rental providers directly brought flights and vehicles into one booking flow.</li>
+                    <li>Make asynchronous boundaries explicit. GraphQL, through Apollo Server, served the request API, and Kafka carried work between services, so slow or partner-dependent steps did not block the caller.</li>
+                    <li>Hold the quality bar with TDD. Test-Driven Development, automated tests in Jest, code review, and continuous integration on Bitbucket Pipelines kept the services reliable as they changed.</li>
+                </ol>
+            </section>
+
+            <section class="case-section">
+                <h2>Result</h2>
+                <ul>
+                    <li>About 1,000 to 2,000 business flight and vehicle reservations per month going through the integrations.</li>
+                    <li>Reliable communication and asynchronous processing across the platform's distributed services.</li>
+                    <li>Architecture and planning input on a virtual corporate card designed to support hundreds of thousands of Brazilian reais in transactions.</li>
+                </ul>
+            </section>
+
+            <section class="case-section">
+                <h2>Stack</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">Apollo Server</span>
+                    <span class="skill-tag">Kafka</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Jest</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">AWS SQS</span>
+                    <span class="skill-tag">AWS SNS</span>
+                    <span class="skill-tag">AWS Cognito</span>
+                    <span class="skill-tag">Bitbucket Pipelines</span>
+                    <span class="skill-tag">Sentry</span>
+                    <span class="skill-tag">AWS CloudWatch</span>
+                </div>
+            </section>
+
+            <aside class="related">
+                <h2>Related demo</h2>
+                <p>The <a href="../demos/event-pipeline.html">event pipeline</a> is a small model of publish, retry, and dead letter. It is not connected to VOLL, Kafka, or AWS.</p>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Douglas Bussmann. All rights reserved.</p>
+            <p class="footer-note">Built with passion for clean code and modern web technologies.</p>
+            <p><a class="footer-link" href="https://ko-fi.com/douglasbussmann" target="_blank" rel="noopener noreferrer">Buy me a coffee</a></p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

@@ -1,131 +1,72 @@
-# Douglas Bussmann - Portfolio Website
+# Douglas Bussmann — Portfolio
 
-A modern, portfolio-style static website showcasing professional experience, skills, and achievements.
+A static portfolio for hiring conversations: selected work, three browser demos, and a full resume. Light theme, no build step.
 
-## 🚀 Features
+![Portfolio home page](assets/portfolio-preview.png)
 
-- **Modern Design**: Clean, portfolio-style layout with green and white color scheme (light, recruiter-friendly theme)
-- **Fully Responsive**: Works seamlessly on desktop, tablet, and mobile devices
-- **Smooth Animations**: Scroll-triggered fade-in effects and smooth scrolling navigation
-- **No Dependencies**: Pure vanilla HTML, CSS, and JavaScript - no build process required
-- **Fast Loading**: Minimal code, optimized for performance
-- **SEO Friendly**: Semantic HTML with proper meta tags
-- **Accessible**: Keyboard navigation and ARIA labels
+## Features
 
-## 📁 Project Structure
+- **Selected work**: three case studies (legal operations, event-driven SaaS, esports product)
+- **Interactive demos**: event pipeline, testing lab, and an operations dashboard, all in the browser with fictional data
+- **Resume**: experience, skills, education, and courses on their own page
+- **Responsive**: desktop, tablet, and mobile
+- **No dependencies**: HTML, CSS, and JavaScript only
+
+## Project structure
 
 ```
-DouglasWebPage/
-├── index.html          # Main HTML structure
-├── styles/
-│   └── main.css        # All styling (responsive, animations, themes)
-├── scripts/
-│   └── main.js         # Interactive features (smooth scroll, animations)
-└── README.md           # This file
+index.html                          Home
+resume.html                         Full resume
+work/
+  legal-operations.html             Torticity / BairesDev
+  event-driven-platform.html        VOLL / Framework Digital
+  esports-product.html              Gamers Club
+demos/
+  event-pipeline.html
+  testing-lab.html
+  ops-dashboard.html
+styles/main.css
+scripts/main.js                     Nav, scroll, fade-in
+scripts/demos/                      Demo behavior
 ```
 
-## 🛠️ Technologies Used
+## Case study rule
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern CSS with Grid, Flexbox, and animations
-- **JavaScript (ES6+)**: Vanilla JavaScript for interactivity
-- **Google Fonts**: Inter font family
+Case studies use only what is on `resume.html`: role, company, dates, stack, and the results listed there. They do not include claimant data, internal system names, or numbers that are not on the resume. When the resume changes, update the case studies to match.
 
-## 📝 Getting Started
+The demos are illustrations. They are not the products from those jobs.
 
-1. **Clone or download** this repository
-2. **Open** `index.html` in your web browser
-3. That's it! No build process or installation required.
+## Getting started
 
-## 🌐 Deployment Options
+Open `index.html` in a browser. No install step.
 
-### GitHub Pages
+For the demos, a local static server is enough if the browser blocks anything; the pages do not fetch partials, so opening the files directly also works.
 
-1. Create a new repository on GitHub
-2. Push your files to the repository
-3. Go to Settings → Pages
-4. Select the main branch as the source
-5. Your site will be available at `https://yourusername.github.io/repository-name`
+## Deployment
 
-### Netlify
+The site is static. GitHub Pages, Netlify, Vercel, or any file host will do. `CNAME` points at `douglasbussmann.com`.
 
-1. Go to [Netlify](https://www.netlify.com/)
-2. Drag and drop your project folder
-3. Your site will be live instantly!
+## Customization
 
-### Vercel
+Colors live in the CSS variables at the top of `styles/main.css`. Copy edits belong in the HTML pages.
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in your project directory
-3. Follow the prompts
+## Later ideas
 
-### Any Static Hosting Service
+- Blog
+- Contact form
+- Resume PDF download
+- Dark mode
+- Stronger SEO (Open Graph, structured data)
+- PWA
 
-Since this is a static website, you can deploy it to any static hosting service:
-- AWS S3 + CloudFront
-- Firebase Hosting
-- Surge.sh
-- Or any web server
+## Browser support
 
-## 🎨 Customization
+Current Chrome, Firefox, Safari, and Edge.
 
-### Colors
-
-Edit the CSS variables in `styles/main.css`:
-
-```css
-:root {
-    --primary-green: #00ff88;
-    --bg-black: #000000;
-    --text-white: #ffffff;
-    /* ... */
-}
-```
-
-### Content
-
-Simply edit `index.html` to update your information. All content is in semantic HTML, making it easy to modify.
-
-### Styling
-
-All styles are in `styles/main.css`. The code is well-organized with comments for easy navigation.
-
-## 🔮 Future Enhancements
-
-Ideas for evolving the website:
-
-- **Interactive Timeline**: Animated timeline for work experience
-- **Skills Visualization**: Charts or progress bars for skill levels
-- **Project Showcase**: Add a projects/portfolio section
-- **Blog Section**: Add a blog for technical articles
-- **Dark Mode Toggle**: Theme switcher (though it's already dark!)
-- **PDF Download**: Button to download resume PDF
-- **Contact Form**: Add a contact form using services like Formspree
-- **Analytics**: Add Google Analytics or similar
-- **SEO Optimization**: Enhanced meta tags, Open Graph, structured data
-- **Performance**: Image optimization, lazy loading
-- **PWA**: Make it a Progressive Web App for offline access
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📄 License
-
-This project is open source and available for personal use.
-
-## 👤 Author
+## Author
 
 **Douglas Bussmann**
 
 - Email: douglasfelipebs@hotmail.com
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/douglas-siedschlag)
+- LinkedIn: [douglasfelipebs](https://www.linkedin.com/in/douglasfelipebs)
 - Location: Curitiba, PR, Brazil
-
----
-
-Built with ❤️ using vanilla HTML, CSS, and JavaScript.
-

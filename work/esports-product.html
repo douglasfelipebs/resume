@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: backend leadership at Gamers Club. Scalable services for a high-traffic SaaS platform, mentoring six engineers, and a 20% lift in key conversion metrics.">
+    <title>High-traffic platform — Douglas Bussmann</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="work">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Douglas Bussmann</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#work" class="nav-link" data-nav="work">Work</a></li>
+                <li><a href="../index.html#demos" class="nav-link" data-nav="demos">Demos</a></li>
+                <li><a href="../resume.html" class="nav-link" data-nav="resume">Resume</a></li>
+                <li><a href="../index.html#contact" class="nav-link" data-nav="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="subpage">
+        <article class="case">
+            <p class="back-link"><a href="../index.html#work">All work</a></p>
+            <p class="case-kicker">Case study · Gamers Club</p>
+            <h1>Backend leadership on a high-traffic platform</h1>
+            <p class="case-meta">Software Engineer · July 2021 – June 2023 · Sorocaba, SP (Remote)</p>
+
+            <section class="case-section">
+                <h2>Context</h2>
+                <p>
+                    <a href="https://gamersclub.gg/" target="_blank" rel="noopener noreferrer">Gamers Club</a> runs a high-traffic SaaS platform for competitive gaming.
+                    I led the design and development of backend services there, working closely with Product and Engineering.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>Problem</h2>
+                <p>
+                    The platform's backend had to keep up with heavy traffic while the product kept changing.
+                    The team was also growing, so engineering quality and delivery practices had to scale along with the code.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>Constraints</h2>
+                <p>
+                    Services ran as distributed systems on Kubernetes, behind REST APIs other teams depended on.
+                    Product goals were measured in conversion metrics, so technical work had to connect to those numbers, not only to the codebase.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>What I owned</h2>
+                <ul>
+                    <li>Leading the design and development of scalable backend services.</li>
+                    <li>Designing and maintaining REST APIs and distributed systems.</li>
+                    <li>Mentoring a team of six engineers through code review, knowledge-sharing sessions, and day-to-day guidance.</li>
+                    <li>Defining technical initiatives with Product and Engineering leadership.</li>
+                    <li>Technical interviews, onboarding new engineers, and technical presentations on backend architecture, engineering practices, and software quality.</li>
+                </ul>
+            </section>
+
+            <section class="case-section">
+                <h2>Decisions</h2>
+                <ol>
+                    <li>Design for the long run. REST APIs and distributed services were built for scalability, maintainability, and long-term reliability, because other teams and heavy traffic depended on them.</li>
+                    <li>Tie technical initiatives to product metrics. Planning with Product and Engineering leadership kept engineering work pointed at conversion, without trading away quality or delivery consistency.</li>
+                    <li>Invest in people and operations together. Mentoring, interviews, and onboarding raised the team's bar, while better observability with Grafana, Sentry, and CloudWatch, plus deployment and CI/CD improvements, raised the platform's.</li>
+                </ol>
+            </section>
+
+            <section class="case-section">
+                <h2>Result</h2>
+                <ul>
+                    <li>Technical initiatives that contributed to a 20% increase in key product conversion metrics.</li>
+                    <li>Six engineers mentored, plus new engineers interviewed and onboarded.</li>
+                    <li>Better operational reliability through observability, monitoring, deployment processes, and CI/CD pipelines.</li>
+                </ul>
+            </section>
+
+            <section class="case-section">
+                <h2>Stack</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">NestJS</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Jest</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">AWS SQS</span>
+                    <span class="skill-tag">AWS SNS</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Grafana</span>
+                    <span class="skill-tag">Sentry</span>
+                    <span class="skill-tag">AWS CloudWatch</span>
+                </div>
+            </section>
+
+            <aside class="related">
+                <h2>Related demo</h2>
+                <p>The <a href="../demos/ops-dashboard.html">ops dashboard</a> shows the operational side of a platform: search, filters, a detail panel, and loading, empty, and error states. It is not Gamers Club.</p>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Douglas Bussmann. All rights reserved.</p>
+            <p class="footer-note">Built with passion for clean code and modern web technologies.</p>
+            <p><a class="footer-link" href="https://ko-fi.com/douglasbussmann" target="_blank" rel="noopener noreferrer">Buy me a coffee</a></p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

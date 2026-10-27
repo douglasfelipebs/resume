@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case study: full-stack systems for Torticity, a US legal services company, via BairesDev. AI-powered document processing and CRM integrations with about 160 law firms.">
+    <title>Legal services platform | Douglas Bussmann</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="work">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Douglas Bussmann</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#work" class="nav-link" data-nav="work">Work</a></li>
+                <li><a href="../index.html#demos" class="nav-link" data-nav="demos">Demos</a></li>
+                <li><a href="../resume.html" class="nav-link" data-nav="resume">Resume</a></li>
+                <li><a href="../index.html#contact" class="nav-link" data-nav="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="subpage">
+        <article class="case">
+            <p class="back-link"><a href="../index.html#work">All work</a></p>
+            <p class="case-kicker">Case study · BairesDev · Torticity</p>
+            <h1>Full-stack systems for a US legal services company</h1>
+            <p class="case-meta">Software Engineer · July 2024 – October 2026 · Boca Raton, FL (Remote)</p>
+
+            <section class="case-section">
+                <h2>Context</h2>
+                <p>
+                    <a href="https://www.torticity.com/" target="_blank" rel="noopener noreferrer">Torticity</a> is a US legal services company that supports law firms with claimant cases.
+                    I worked there as a contractor through <a href="https://www.bairesdev.com/" target="_blank" rel="noopener noreferrer">BairesDev</a>, fully remote and in English, alongside Product, Design, and Engineering.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>Problem</h2>
+                <p>
+                    Legal teams spent a long time reviewing complex case documentation by hand.
+                    Case data also lived with the law firms, spread across their own CRM platforms, and had to reach the internal users who worked those cases.
+                    This page does not include claimant records, case files, or internal system names.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>Constraints</h2>
+                <p>
+                    The work touched backend systems, APIs, integrations, and web applications at the same time, in a remote, English-speaking team.
+                    Every change had to balance usability, maintainability, scalability, and business requirements on a production claims platform.
+                </p>
+            </section>
+
+            <section class="case-section">
+                <h2>What I owned</h2>
+                <ul>
+                    <li>Design, development, and maintenance of full-stack solutions across backend systems, APIs, integrations, and web applications.</li>
+                    <li>Leading new features from solution design through deployment.</li>
+                    <li>Designing and delivering AI-powered document processing for legal case documentation.</li>
+                    <li>Leading the integrations with about 160 law firms across five CRM platforms.</li>
+                    <li>Contributing to architectural decisions and engineering practices for the production systems.</li>
+                </ul>
+            </section>
+
+            <section class="case-section">
+                <h2>Decisions</h2>
+                <ol>
+                    <li>Put AI where the manual work was heaviest. Document review was the bottleneck, so the document processing targeted that step instead of a general-purpose feature.</li>
+                    <li>Treat CRM integrations as one product surface. Five CRM platforms fed data from about 160 firms, so synchronisation had to work for hundreds of internal users and the attorneys behind them, not firm by firm.</li>
+                    <li>Keep quality in the delivery loop. Automated tests with Jest, code review, observability with Sentry and Datadog, and CI/CD on GitHub Actions kept a production claims platform changing safely.</li>
+                </ol>
+            </section>
+
+            <section class="case-section">
+                <h2>Result</h2>
+                <ul>
+                    <li>Manual document review time dropped by over 90%, so legal teams processed complex case documentation significantly faster.</li>
+                    <li>Data synchronisation with about 160 law firms on five CRM platforms, serving hundreds of internal users and supporting thousands of attorneys.</li>
+                    <li>Contributions to a claims platform that has helped recover an estimated hundreds of millions in restitution.</li>
+                </ul>
+            </section>
+
+            <section class="case-section">
+                <h2>Stack</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">NestJS</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">Nuxt.js</span>
+                    <span class="skill-tag">Vuetify</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">TypeORM</span>
+                    <span class="skill-tag">MikroORM</span>
+                    <span class="skill-tag">Jest</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">Sentry</span>
+                    <span class="skill-tag">Datadog</span>
+                </div>
+            </section>
+
+            <aside class="related">
+                <h2>Related demo</h2>
+                <p>The <a href="../demos/testing-lab.html">testing lab</a> shows how I choose a test layer. It is a browser example, not the Torticity product.</p>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Douglas Bussmann. All rights reserved.</p>
+            <p class="footer-note">Built with passion for clean code and modern web technologies.</p>
+            <p><a class="footer-link" href="https://ko-fi.com/douglasbussmann" target="_blank" rel="noopener noreferrer">Buy me a coffee</a></p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

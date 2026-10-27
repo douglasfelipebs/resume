@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive demo: a fictional operations list with search, status filters, a detail panel, and loading, empty, and error states.">
+    <title>Ops dashboard | Douglas Bussmann</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="demos">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Douglas Bussmann</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#work" class="nav-link" data-nav="work">Work</a></li>
+                <li><a href="../index.html#demos" class="nav-link" data-nav="demos">Demos</a></li>
+                <li><a href="../resume.html" class="nav-link" data-nav="resume">Resume</a></li>
+                <li><a href="../index.html#contact" class="nav-link" data-nav="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="subpage">
+        <div class="demo-wrap">
+            <p class="back-link"><a href="../index.html#demos">All demos</a></p>
+            <p class="case-kicker">Interactive demo</p>
+            <h1>Ops dashboard</h1>
+            <p class="demo-lede">A small operational list with search, status filters, a detail panel, and loading, empty, and error states. Every job is fictional.</p>
+
+            <form class="demo-form" id="dashboard-toolbar">
+                <label for="job-search">Search
+                    <input type="search" id="job-search" placeholder="Name or id" autocomplete="off">
+                </label>
+                <label for="job-status">Status
+                    <select id="job-status">
+                        <option value="all">All</option>
+                        <option value="queued">Queued</option>
+                        <option value="running">Running</option>
+                        <option value="failed">Failed</option>
+                        <option value="done">Done</option>
+                    </select>
+                </label>
+                <label class="check-label" for="job-fail">
+                    <input type="checkbox" id="job-fail">
+                    Simulate a failed load
+                </label>
+                <button type="button" class="btn btn-primary" id="job-reload">Reload</button>
+            </form>
+            <p class="demo-hint" id="job-summary" aria-live="polite"></p>
+
+            <div class="dashboard">
+                <div class="job-list" id="job-list"></div>
+                <aside class="detail-panel" id="job-detail" aria-live="polite"></aside>
+            </div>
+            <p class="demo-note">Related case study: <a href="../work/esports-product.html">Backend leadership on a high-traffic platform</a>. These jobs are not from that product.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Douglas Bussmann. All rights reserved.</p>
+            <p class="footer-note">Built with passion for clean code and modern web technologies.</p>
+            <p><a class="footer-link" href="https://ko-fi.com/douglasbussmann" target="_blank" rel="noopener noreferrer">Buy me a coffee</a></p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/demos/ops-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive demo: a fictional queue with retries and a dead letter. A model of Kafka and SQS/SNS behavior.">
+    <title>Event pipeline | Douglas Bussmann</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="demos">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Douglas Bussmann</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#work" class="nav-link" data-nav="work">Work</a></li>
+                <li><a href="../index.html#demos" class="nav-link" data-nav="demos">Demos</a></li>
+                <li><a href="../resume.html" class="nav-link" data-nav="resume">Resume</a></li>
+                <li><a href="../index.html#contact" class="nav-link" data-nav="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="subpage">
+        <div class="demo-wrap">
+            <p class="back-link"><a href="../index.html#demos">All demos</a></p>
+            <p class="case-kicker">Interactive demo</p>
+            <h1>Event pipeline</h1>
+            <p class="demo-lede">A model of a queue, a consumer, retries, and a dead letter. The messages are fictional. Nothing here is connected to Kafka or AWS.</p>
+            <p class="demo-hint">Publish “Fails until dead letter” to see three attempts, then the dead-letter column. “Fails once, then succeeds” returns the message to the queue a single time. The consumer handles one message at a time.</p>
+
+            <form id="pipeline-form" class="demo-form">
+                <label for="pipeline-topic">Topic
+                    <select id="pipeline-topic">
+                        <option value="invoice.issued">invoice.issued</option>
+                        <option value="payment.failed">payment.failed</option>
+                        <option value="user.invited">user.invited</option>
+                    </select>
+                </label>
+                <label for="pipeline-mode">Failure mode
+                    <select id="pipeline-mode">
+                        <option value="success">Delivered on the first try</option>
+                        <option value="retry">Fails once, then succeeds</option>
+                        <option value="dead">Fails until dead letter</option>
+                    </select>
+                </label>
+                <button type="submit" class="btn btn-primary">Publish</button>
+                <button type="button" class="btn btn-secondary" id="pipeline-reset">Clear</button>
+            </form>
+
+            <div class="pipeline">
+                <section class="pipeline-col" aria-labelledby="col-queue">
+                    <h2 id="col-queue">Queue</h2>
+                    <ul id="pipeline-queue"></ul>
+                </section>
+                <section class="pipeline-col" aria-labelledby="col-consumer">
+                    <h2 id="col-consumer">Consumer</h2>
+                    <ul id="pipeline-consumer"></ul>
+                </section>
+                <section class="pipeline-col" aria-labelledby="col-done">
+                    <h2 id="col-done">Processed</h2>
+                    <ul id="pipeline-done"></ul>
+                </section>
+                <section class="pipeline-col" aria-labelledby="col-dead">
+                    <h2 id="col-dead">Dead letter</h2>
+                    <ul id="pipeline-dead"></ul>
+                </section>
+            </div>
+            <ol class="pipeline-log" id="pipeline-log"></ol>
+            <p class="demo-note">Related case study: <a href="../work/event-driven-platform.html">Event-driven services for corporate travel and expenses</a>. That page describes VOLL. This demo does not.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Douglas Bussmann. All rights reserved.</p>
+            <p class="footer-note">Built with passion for clean code and modern web technologies.</p>
+            <p><a class="footer-link" href="https://ko-fi.com/douglasbussmann" target="_blank" rel="noopener noreferrer">Buy me a coffee</a></p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/demos/event-pipeline.js"></script>
+</body>
+</html>

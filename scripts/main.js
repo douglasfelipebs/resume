@@ -56,29 +56,34 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Active navigation link highlighting
-const sections = document.querySelectorAll('.section, #hero');
-
+// Active navigation link highlighting.
+// Home follows the section in view. Other pages keep one item selected.
 const updateActiveNav = () => {
+    const page = document.body.dataset.page || 'home';
+
+    if (page !== 'home') {
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.nav === page);
+        });
+        return;
+    }
+
+    const spySections = Array.from(document.querySelectorAll('#work, #demos, #contact'));
     let current = '';
     const scrollPosition = window.pageYOffset + 150;
 
-    sections.forEach(section => {
+    spySections.forEach((section, index) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        const sectionId = section.getAttribute('id');
+        const isLast = index === spySections.length - 1;
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = sectionId;
+        if (scrollPosition >= sectionTop && (isLast || scrollPosition < sectionTop + sectionHeight)) {
+            current = section.id;
         }
     });
 
     navLinks.forEach(link => {
-        link.classList.remove('active');
-        const href = link.getAttribute('href');
-        if (href === `#${current}`) {
-            link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
 };
 
@@ -130,24 +135,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
-
-// ============================================
-// Hero Scroll Indicator Click
-// ============================================
-
-const scrollIndicator = document.querySelector('.scroll-indicator');
-if (scrollIndicator) {
-    scrollIndicator.addEventListener('click', () => {
-        const aboutSection = document.querySelector('#about');
-        if (aboutSection) {
-            const offsetTop = aboutSection.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-}
 
 // ============================================
 // Performance Optimization

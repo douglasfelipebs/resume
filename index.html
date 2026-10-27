@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Douglas Bussmann - Senior Software Engineer. Portfolio showcasing professional experience, skills, and achievements.">
+    <meta name="description" content="Douglas Bussmann, Senior Software Engineer. Selected work, interactive demos, and a full resume.">
     <meta name="keywords" content="Software Engineer, Node.js, TypeScript, Full-stack Developer, Senior Engineer">
-    <title>Douglas Bussmann - Senior Software Engineer</title>
+    <title>Douglas Bussmann | Senior Software Engineer</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
+<body data-page="home">
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -24,17 +23,14 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="https://ko-fi.com/douglasbussmann" target="_blank" class="nav-link nav-coffee-btn">☕ Buy me a coffee</a></li>
+                <li><a href="#work" class="nav-link" data-nav="work">Work</a></li>
+                <li><a href="#demos" class="nav-link" data-nav="demos">Demos</a></li>
+                <li><a href="resume.html" class="nav-link" data-nav="resume">Resume</a></li>
+                <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -49,705 +45,124 @@
                     <span class="name-last">Bussmann</span>
                 </h1>
                 <h2 class="hero-title">Senior Software Engineer</h2>
+                <p class="hero-lead">I ship full-stack product work for international teams across many domains, including legal services, event-driven SaaS, and high-traffic platforms. I care about correctness, clear asynchronous boundaries, and tests that match the risk.</p>
                 <div class="hero-details">
                     <p class="hero-location">📍 <a href="https://en.wikipedia.org/wiki/Curitiba" target="_blank" rel="noopener noreferrer" class="hero-link">Curitiba, PR, Brazil</a> <span class="hero-location-note">(but I can work from anywhere 🌍)</span></p>
-                    <p class="hero-phone">📞 <a href="tel:+5547988630011" class="hero-link">+55 47 98863-0011</a></p>
-                    <p class="hero-email">✉️ <a href="mailto:douglasfelipebs@hotmail.com" class="hero-link">douglasfelipebs@hotmail.com</a></p>
                 </div>
                 <div class="hero-links">
-                    <a href="https://www.linkedin.com/in/douglasfelipebs" target="_blank" rel="noopener noreferrer" class="btn btn-primary">LinkedIn</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    <a href="#work" class="btn btn-primary">Selected work</a>
+                    <a href="resume.html" class="btn btn-secondary">Resume</a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
-        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="work" class="work section">
         <div class="container">
-            <h2 class="section-title">Profile</h2>
-            <div class="about-content fade-in">
-                <p class="about-text">
-                    Senior Software Engineer with almost a decade of experience shaping complex systems and driving innovative solutions. 
-                    I have a proven track record of adapting to diverse environments, collaborating with international teams, and mastering 
-                    a wide range of technologies. Notably, my recent role as Engineer at BairesDev honed my expertise in NodeJS, TypeScript, 
-                    and AWS, while my tenure at Gamers Club showcased my leadership in team management and Agile methodologies. My educational 
-                    background includes a Bachelor's in Software Engineering and a Post-graduation in Agile Methodologies, complementing my 
-                    robust skill set in cloud computing, automated testing, and design patterns. Eager to leverage my expertise in a dynamic 
-                    Senior Software Engineer role.
-                </p>
+            <h2 class="section-title">Selected work</h2>
+            <p class="section-lede">Three roles written so a hiring team can see the problem, the stack, and what I was responsible for.</p>
+            <div class="work-grid fade-in">
+                <a class="work-card" href="work/legal-operations.html">
+                    <span class="work-card-kind">Case study</span>
+                    <h3>Legal services platform</h3>
+                    <p>AI document processing that cut manual review time by over 90%, plus CRM integrations with about 160 law firms. At Torticity, via BairesDev.</p>
+                    <ul class="work-card-stack">
+                        <li>NestJS</li>
+                        <li>Vue</li>
+                        <li>Nuxt</li>
+                        <li>MySQL</li>
+                    </ul>
+                </a>
+                <a class="work-card" href="work/event-driven-platform.html">
+                    <span class="work-card-kind">Case study</span>
+                    <h3>Corporate travel SaaS</h3>
+                    <p>Booking integrations for about 1,000 to 2,000 business trips a month at VOLL, built on GraphQL and Kafka.</p>
+                    <ul class="work-card-stack">
+                        <li>GraphQL</li>
+                        <li>Kafka</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                    </ul>
+                </a>
+                <a class="work-card" href="work/esports-product.html">
+                    <span class="work-card-kind">Case study</span>
+                    <h3>High-traffic platform</h3>
+                    <p>Backend leadership at Gamers Club: six engineers mentored and a 20% lift in key conversion metrics.</p>
+                    <ul class="work-card-stack">
+                        <li>NestJS</li>
+                        <li>REST APIs</li>
+                        <li>PostgreSQL</li>
+                        <li>Kubernetes</li>
+                    </ul>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <section id="demos" class="demos section">
+        <div class="container">
+            <h2 class="section-title">Interactive demos</h2>
+            <p class="section-lede">Small browser examples of the same skills. They use fictional data and are not client products.</p>
+            <div class="work-grid fade-in">
+                <a class="work-card" href="demos/event-pipeline.html">
+                    <span class="work-card-kind">Interactive demo</span>
+                    <h3>Event pipeline</h3>
+                    <p>Publish a message and watch retries land in a dead letter.</p>
+                    <ul class="work-card-stack">
+                        <li>Kafka</li>
+                        <li>SQS</li>
+                        <li>SNS</li>
+                    </ul>
+                </a>
+                <a class="work-card" href="demos/testing-lab.html">
+                    <span class="work-card-kind">Interactive demo</span>
+                    <h3>Testing lab</h3>
+                    <p>Pick a bug and see which test layer should catch it.</p>
+                    <ul class="work-card-stack">
+                        <li>Unit</li>
+                        <li>Integration</li>
+                        <li>End-to-end</li>
+                    </ul>
+                </a>
+                <a class="work-card" href="demos/ops-dashboard.html">
+                    <span class="work-card-kind">Interactive demo</span>
+                    <h3>Ops dashboard</h3>
+                    <p>Search, filter, and inspect fictional jobs, including empty and error states.</p>
+                    <ul class="work-card-stack">
+                        <li>Search</li>
+                        <li>Filters</li>
+                        <li>UI states</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="skills section">
         <div class="container">
             <h2 class="section-title">Skills</h2>
-            <div class="skills-grid fade-in">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Core Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">NestJS</span>
-                        <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">Nuxt.js</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Backend & APIs</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">GraphQL</span>
-                        <span class="skill-tag">Apollo Server</span>
-                        <span class="skill-tag">Kafka</span>
-                        <span class="skill-tag">SaaS</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Redis</span>
-                        <span class="skill-tag">TypeORM</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Cloud & DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS S3</span>
-                        <span class="skill-tag">AWS SQS</span>
-                        <span class="skill-tag">AWS SNS</span>
-                        <span class="skill-tag">AWS Cognito</span>
-                        <span class="skill-tag">AWS CloudWatch</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub Actions</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Testing & Quality</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Jest</span>
-                        <span class="skill-tag">TDD</span>
-                        <span class="skill-tag">Unit Testing</span>
-                        <span class="skill-tag">Integration Testing</span>
-                        <span class="skill-tag">E2E Testing</span>
-                        <span class="skill-tag">UAT</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Methodologies & Practices</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Scrum</span>
-                        <span class="skill-tag">Kanban</span>
-                        <span class="skill-tag">Agile</span>
-                        <span class="skill-tag">SOLID</span>
-                        <span class="skill-tag">CLEAN</span>
-                        <span class="skill-tag">DRY</span>
-                        <span class="skill-tag">Design Patterns</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Monitoring & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Sentry</span>
-                        <span class="skill-tag">Datadog</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">Product Metrics</span>
-                        <span class="skill-tag">KPIs</span>
-                        <span class="skill-tag">OKRs</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Additional</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Ruby on Rails</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">HTML & CSS</span>
-                        <span class="skill-tag">Leadership</span>
-                        <span class="skill-tag">Team Management</span>
-                    </div>
-                </div>
+            <p class="section-lede">The tools I use most right now. The <a href="resume.html#skills">full list</a> is on the resume.</p>
+            <div class="skill-tags skill-tags-center fade-in">
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">NestJS</span>
+                <span class="skill-tag">Vue/Nuxt</span>
+                <span class="skill-tag">React/Next</span>
+                <span class="skill-tag">GraphQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Testing</span>
+                <span class="skill-tag">Docker</span>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience section">
-        <div class="container">
-            <h2 class="section-title">Employment History</h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Full-stack Software Engineer</h3>
-                            <span class="timeline-company"><a href="https://www.bairesdev.com/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">BairesDev</a><span class="timeline-contractor"><a href="https://www.torticity.com/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">Torticity</a></span></span>
-                            <span class="timeline-location">Boca Raton, FL (Remote)</span>
-                        </div>
-                        <span class="timeline-date">July 2024 - Present</span>
-                        <p class="timeline-description">
-                            Currently working as a contractor at Torticity, a US-based company that helps law firms across America 
-                            to improve their claimant's cases both in Personal Injuries (PI) and mass tort. Working in a fully 
-                            English-speaking environment as a full-stack engineer.
-                        </p>
-                        <div class="timeline-skills">
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Back-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">NodeJS</span>
-                                    <span class="timeline-skill-chip">TypeScript</span>
-                                    <span class="timeline-skill-chip">NestJS</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Front-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Vue</span>
-                                    <span class="timeline-skill-chip">NuxtJS</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Database</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">MySQL</span>
-                                    <span class="timeline-skill-chip">TypeORM</span>
-                                    <span class="timeline-skill-chip">MikroORM</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Testing</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Integration Testing</span>
-                                    <span class="timeline-skill-chip">Unit Testing</span>
-                                    <span class="timeline-skill-chip">E2E Testing</span>
-                                    <span class="timeline-skill-chip">Jest</span>
-                                    <span class="timeline-skill-chip">UAT</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Practices</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">SOLID</span>
-                                    <span class="timeline-skill-chip">CLEAN</span>
-                                    <span class="timeline-skill-chip">DRY</span>
-                                    <span class="timeline-skill-chip">Code Reviewing</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">DevOps</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Docker</span>
-                                    <span class="timeline-skill-chip">AWS S3</span>
-                                    <span class="timeline-skill-chip">CI/CD</span>
-                                    <span class="timeline-skill-chip">GitHub Actions</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Monitoring</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Sentry</span>
-                                    <span class="timeline-skill-chip">Datadog</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Methodology</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Scrum</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Software Engineer</h3>
-                            <span class="timeline-company"><a href="https://www.frameworkdigital.com.br/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">Framework Digital</a><span class="timeline-contractor"><a href="https://www.govoll.com/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">VOLL</a></span></span>
-                            <span class="timeline-location">Belo Horizonte, MG (Remote)</span>
-                        </div>
-                        <span class="timeline-date">September 2023 - July 2024</span>
-                        <p class="timeline-description">
-                            Worked as a contractor stationed at VOLL, collaborating with the CROSS team, maintaining and creating 
-                            new features through the entire VOLL ecosystem.
-                        </p>
-                        <div class="timeline-skills">
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Back-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">NodeJS</span>
-                                    <span class="timeline-skill-chip">TypeScript</span>
-                                    <span class="timeline-skill-chip">GraphQL</span>
-                                    <span class="timeline-skill-chip">Kafka</span>
-                                    <span class="timeline-skill-chip">ApolloServer</span>
-                                    <span class="timeline-skill-chip">SaaS</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Database</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">MongoDB</span>
-                                    <span class="timeline-skill-chip">Redis</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Testing</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Integration Testing</span>
-                                    <span class="timeline-skill-chip">Unit Testing</span>
-                                    <span class="timeline-skill-chip">E2E Testing</span>
-                                    <span class="timeline-skill-chip">Jest</span>
-                                    <span class="timeline-skill-chip">TDD</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Practices</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">SOLID</span>
-                                    <span class="timeline-skill-chip">CLEAN</span>
-                                    <span class="timeline-skill-chip">DRY</span>
-                                    <span class="timeline-skill-chip">Code Reviewing</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">DevOps</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Docker</span>
-                                    <span class="timeline-skill-chip">AWS S3</span>
-                                    <span class="timeline-skill-chip">AWS SQS</span>
-                                    <span class="timeline-skill-chip">AWS SNS</span>
-                                    <span class="timeline-skill-chip">AWS Cognito</span>
-                                    <span class="timeline-skill-chip">CI/CD</span>
-                                    <span class="timeline-skill-chip">Bitbucket</span>
-                                    <span class="timeline-skill-chip">Bitbucket Pipelines</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Monitoring</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Sentry</span>
-                                    <span class="timeline-skill-chip">AWS CloudWatch</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Methodology</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Kanban</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Software Engineer</h3>
-                            <span class="timeline-company"><a href="https://gamersclub.gg/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">Gamers Club</a></span>
-                            <span class="timeline-location">Remote</span>
-                        </div>
-                        <span class="timeline-date">July 2021 - June 2023</span>
-                        <p class="timeline-description">
-                            Worked with eSports-related software, including VALORANT, LoL, and CS:GO. Showcased Agile knowledge, 
-                            acting as an unofficial Scrum Master. Approached the product team to learn more about their end of the business.
-                        </p>
-                        <div class="timeline-skills">
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Back-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">NodeJS</span>
-                                    <span class="timeline-skill-chip">TypeScript</span>
-                                    <span class="timeline-skill-chip">NestJS</span>
-                                    <span class="timeline-skill-chip">REST APIs</span>
-                                    <span class="timeline-skill-chip">Swagger</span>
-                                    <span class="timeline-skill-chip">Documentation</span>
-                                    <span class="timeline-skill-chip">SaaS</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Front-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">ReactJS</span>
-                                    <span class="timeline-skill-chip">NextJS</span>
-                                    <span class="timeline-skill-chip">HTML</span>
-                                    <span class="timeline-skill-chip">CSS</span>
-                                    <span class="timeline-skill-chip">Javascript</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Database</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">MySQL</span>
-                                    <span class="timeline-skill-chip">Redis</span>
-                                    <span class="timeline-skill-chip">PostgreSQL</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Testing</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Integration Testing</span>
-                                    <span class="timeline-skill-chip">Unit Testing</span>
-                                    <span class="timeline-skill-chip">E2E Testing</span>
-                                    <span class="timeline-skill-chip">Jest</span>
-                                    <span class="timeline-skill-chip">TDD</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Practices</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">SOLID</span>
-                                    <span class="timeline-skill-chip">CLEAN</span>
-                                    <span class="timeline-skill-chip">DRY</span>
-                                    <span class="timeline-skill-chip">Code Reviewing</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">DevOps</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Docker</span>
-                                    <span class="timeline-skill-chip">Kubernetes</span>
-                                    <span class="timeline-skill-chip">AWS S3</span>
-                                    <span class="timeline-skill-chip">AWS SQS</span>
-                                    <span class="timeline-skill-chip">AWS SNS</span>
-                                    <span class="timeline-skill-chip">CI/CD</span>
-                                    <span class="timeline-skill-chip">GitHub</span>
-                                    <span class="timeline-skill-chip">GitHub Actions</span>
-                                    <span class="timeline-skill-chip">Jenkins</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Monitoring</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Grafana</span>
-                                    <span class="timeline-skill-chip">Sentry</span>
-                                    <span class="timeline-skill-chip">AWS CloudWatch</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Product & Leadership</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Product Metrics</span>
-                                    <span class="timeline-skill-chip">KPIs</span>
-                                    <span class="timeline-skill-chip">OKRs</span>
-                                    <span class="timeline-skill-chip">Leadership</span>
-                                    <span class="timeline-skill-chip">Team Management</span>
-                                    <span class="timeline-skill-chip">Hiring Process</span>
-                                    <span class="timeline-skill-chip">Team Monitoring</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Methodology</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Scrum</span>
-                                    <span class="timeline-skill-chip">Kanban</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Software Engineer</h3>
-                            <span class="timeline-company"><a href="https://www.euax.com.br/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">Grupo EUAX</a></span>
-                            <span class="timeline-location">Remote</span>
-                        </div>
-                        <span class="timeline-date">December 2020 - June 2021</span>
-                        <p class="timeline-description">
-                            Worked in the "bugs department", fixing urgent problems affecting clients across all three of EUAX's products. 
-                            Gained experience in personal time management and task prioritization.
-                        </p>
-                        <div class="timeline-skills">
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Back-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Ruby</span>
-                                    <span class="timeline-skill-chip">Ruby on Rails</span>
-                                    <span class="timeline-skill-chip">SaaS</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Front-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">HTML</span>
-                                    <span class="timeline-skill-chip">CSS</span>
-                                    <span class="timeline-skill-chip">Javascript</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Database</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">MySQL</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Testing</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">RSpec</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">DevOps</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Docker</span>
-                                    <span class="timeline-skill-chip">Kubernetes</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Monitoring</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Grafana</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Methodology</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Scrum</span>
-                                    <span class="timeline-skill-chip">Kanban</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Skills</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Task Prioritization</span>
-                                    <span class="timeline-skill-chip">Time Management</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Web Developer</h3>
-                            <span class="timeline-company"><a href="https://www.conectra.com.br/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">Conectra Sistemas</a></span>
-                            <span class="timeline-location">Rio do Sul, SC</span>
-                        </div>
-                        <span class="timeline-date">October 2018 - December 2020</span>
-                        <p class="timeline-description">
-                            Started as a junior software developer, creating/maintaining document management software for an accountancy agency. 
-                            Climbed the ladder to Software Developer through fast-paced learning.
-                        </p>
-                        <div class="timeline-skills">
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Back-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">NodeJS</span>
-                                    <span class="timeline-skill-chip">Meteor</span>
-                                    <span class="timeline-skill-chip">TypeScript</span>
-                                    <span class="timeline-skill-chip">REST APIs</span>
-                                    <span class="timeline-skill-chip">Swagger</span>
-                                    <span class="timeline-skill-chip">Documentation</span>
-                                    <span class="timeline-skill-chip">SaaS</span>
-                                    <span class="timeline-skill-chip">Micro-services</span>
-                                    <span class="timeline-skill-chip">SSR</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Front-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">ReactJS</span>
-                                    <span class="timeline-skill-chip">HTML</span>
-                                    <span class="timeline-skill-chip">CSS</span>
-                                    <span class="timeline-skill-chip">Javascript</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Database</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">MongoDB</span>
-                                    <span class="timeline-skill-chip">Redis</span>
-                                    <span class="timeline-skill-chip">Firebase</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Testing</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">MochaJS</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Practices</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">SOLID</span>
-                                    <span class="timeline-skill-chip">CLEAN</span>
-                                    <span class="timeline-skill-chip">DRY</span>
-                                    <span class="timeline-skill-chip">Code Reviewing</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">DevOps</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Docker</span>
-                                    <span class="timeline-skill-chip">Kubernetes</span>
-                                    <span class="timeline-skill-chip">Rancher</span>
-                                    <span class="timeline-skill-chip">Linux</span>
-                                    <span class="timeline-skill-chip">SSH</span>
-                                    <span class="timeline-skill-chip">AWS S3</span>
-                                    <span class="timeline-skill-chip">AWS SQS</span>
-                                    <span class="timeline-skill-chip">AWS CloudWatch</span>
-                                    <span class="timeline-skill-chip">CI/CD</span>
-                                    <span class="timeline-skill-chip">Git</span>
-                                    <span class="timeline-skill-chip">Bitbucket</span>
-                                    <span class="timeline-skill-chip">GitLab</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Methodology</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Scrum</span>
-                                    <span class="timeline-skill-chip">Kanban</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Web Developer Intern</h3>
-                            <span class="timeline-company"><a href="https://www.ipm.com.br/" target="_blank" rel="noopener noreferrer" class="timeline-company-link">IPM Sistemas</a></span>
-                            <span class="timeline-location">Rio do Sul, SC</span>
-                        </div>
-                        <span class="timeline-date">December 2017 - October 2018</span>
-                        <p class="timeline-description">
-                            Worked as a PHP software developer, creating/maintaining the "tax income" module in IPM's software, which was already 
-                            at the time, one of the biggest public administration systems in Brazil. Learned Object-Oriented PHP and had first 
-                            experience with SQL databases using PostgreSQL.
-                        </p>
-                        <div class="timeline-skills">
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Back-end</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">PHP</span>
-                                    <span class="timeline-skill-chip">Object-Oriented</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">Database</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">PostgreSQL</span>
-                                    <span class="timeline-skill-chip">SQL</span>
-                                </div>
-                            </div>
-                            <div class="timeline-skill-group">
-                                <span class="timeline-skill-category">General</span>
-                                <div class="timeline-skill-chips">
-                                    <span class="timeline-skill-chip">Web Development</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid fade-in">
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3 class="education-degree">Postgraduate in Practice of Agile Methodologies</h3>
-                        <span class="education-institution"><a href="https://inscricoes.unicesumar.edu.br/" target="_blank" rel="noopener noreferrer" class="education-institution-link">UniCesumar</a></span>
-                        <span class="education-location">Curitiba, PR</span>
-                    </div>
-                    <span class="education-date">2021 - 2023</span>
-                    <p class="education-description">
-                        Deepened knowledge in Scrum, Traditional methodologies x Agile, Scaling Agile, Testing automation, 
-                        Lean, Kanban, XP and hybrid models, Agile contracts, Leadership and team development, Management 3.0, 
-                        and Dynamics and facilitation.
-                    </p>
-                </div>
-                <div class="education-card">
-                    <div class="education-header">
-                        <h3 class="education-degree">Bachelor of Software Engineering</h3>
-                        <span class="education-institution"><a href="https://www.udesc.br/ceavi" target="_blank" rel="noopener noreferrer" class="education-institution-link">University of the State of Santa Catarina</a></span>
-                        <span class="education-location">Ibirama, SC</span>
-                    </div>
-                    <span class="education-date">2015 - 2019</span>
-                    <p class="education-description">
-                        Comprehensive education covering Java, React, Unity3D, UnrealEngine, Android Studio, HTML, CSS, Javascript, 
-                        SQL/NoSQL databases, Artificial Intelligence, Computer architecture, Software modeling, Algorithms, data structures, 
-                        design patterns, Automated testing, Project management, and more.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses section">
-        <div class="container">
-            <h2 class="section-title">Courses & Certifications</h2>
-            <div class="courses-grid fade-in">
-                <div class="course-item">
-                    <h4 class="course-name">Administration</h4>
-                    <span class="course-provider">CIEE</span>
-                    <span class="course-date">2013 - 2014</span>
-                </div>
-                <div class="course-item">
-                    <h4 class="course-name">Young Talents</h4>
-                    <span class="course-provider">IPM Sistemas</span>
-                    <span class="course-date">October 2017 - December 2017</span>
-                </div>
-                <div class="course-item">
-                    <h4 class="course-name">Ethical Hacking</h4>
-                    <span class="course-provider">Udemy</span>
-                    <span class="course-date">2018</span>
-                </div>
-                <div class="course-item">
-                    <h4 class="course-name">Webinar of AWS Services</h4>
-                    <span class="course-provider">Amazon</span>
-                    <span class="course-date">2018</span>
-                </div>
-                <div class="course-item">
-                    <h4 class="course-name">Node.JS + Express</h4>
-                    <span class="course-provider">Alura Cursos Online</span>
-                    <span class="course-date">2020</span>
-                </div>
-                <div class="course-item">
-                    <h4 class="course-name">Webinar of AWS Services</h4>
-                    <span class="course-provider">Amazon</span>
-                    <span class="course-date">2022</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <section id="contact" class="contact contact-band section">
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
             <div class="contact-content fade-in">
                 <p class="contact-text">
-                    I'm always open to discussing new opportunities, interesting projects, or just having a conversation 
+                    I'm always open to discussing new opportunities, interesting projects, or just having a conversation
                     about technology and software engineering.
                 </p>
                 <div class="contact-info">
@@ -756,13 +171,6 @@
                         <div>
                             <strong>Location</strong>
                             <p><a href="https://en.wikipedia.org/wiki/Curitiba" target="_blank" rel="noopener noreferrer">Curitiba, PR, Brazil</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <div>
-                            <strong>Phone</strong>
-                            <p><a href="tel:+5547988630011">+55 47 98863-0011</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -784,15 +192,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Douglas Bussmann. All rights reserved.</p>
+            <p>&copy; 2026 Douglas Bussmann. All rights reserved.</p>
             <p class="footer-note">Built with passion for clean code and modern web technologies.</p>
+            <p><a class="footer-link" href="https://ko-fi.com/douglasbussmann" target="_blank" rel="noopener noreferrer">Buy me a coffee</a></p>
         </div>
     </footer>
 
     <script src="scripts/main.js"></script>
 </body>
 </html>
-

@@ -137,24 +137,6 @@ document.querySelectorAll('.fade-in').forEach(el => {
 });
 
 // ============================================
-// Hero Scroll Indicator Click
-// ============================================
-
-const scrollIndicator = document.querySelector('.scroll-indicator');
-if (scrollIndicator) {
-    scrollIndicator.addEventListener('click', () => {
-        const aboutSection = document.querySelector('#work') || document.querySelector('#about');
-        if (aboutSection) {
-            const offsetTop = aboutSection.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-}
-
-// ============================================
 // Performance Optimization
 // ============================================
 

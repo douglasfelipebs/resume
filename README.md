@@ -1,4 +1,4 @@
-# Douglas Bussmann — Portfolio
+# Douglas Bussmann: Portfolio
 
 A static portfolio for hiring conversations: selected work, three browser demos, and a full resume. Light theme, no build step.
 
